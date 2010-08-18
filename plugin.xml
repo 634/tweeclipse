@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+
+	<extension point="org.eclipse.ui.views">
+		<category name="Tweeclipse" id="com.github.tweeclipse.Tweeclipse">
+		</category>
+		<view name="TweetView" icon="icons/page_url.gif" category="com.github.tweeclipse.Tweeclipse"
+			class="com.github.tweeclipse.views.TweetView" id="com.github.tweeclipse.views.TweetView">
+		</view>
+	</extension>
+	<extension point="org.eclipse.help.contexts">
+		<contexts file="contexts.xml">
+		</contexts>
+	</extension>
+
+	<extension point="org.eclipse.core.runtime.preferences">
+		<initializer
+			class="com.github.tweeclipse.preferences.TweeclipsePreferenceInitializer" />
+	</extension>
+ <extension
+       point="org.eclipse.ui.preferencePages">
+    <page
+          class="com.github.tweeclipse.preferences.TweeclipsePreferencePage"
+          id="com.github.tweeclipse.preferences.TweeclipsePreferencePage"
+          name="Tweeclipse">
+    </page>
+ </extension>
+
+</plugin>
